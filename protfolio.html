@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/ac42c3b1f7.js" crossorigin="anonymous"></script>
+</head>
+ <style>
+    
+body {
+    background-color: #1e2024;
+}
+
+.head1 {
+    color: white;
+    font-family: "";
+    font-size: 35px;
+    font-weight: bolder;
+}
+
+.para {
+    color: white;
+    font-family: "Roboto";
+    font-size: 11px;
+    font-weight: bold;
+
+}
+
+.head2 {
+    color: white;
+    font-family: "";
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.name-span {
+    font-size: 30px;
+    color: #ae75bf;
+    text-shadow: 0 0 5px #a181b5;
+}
+
+.bt1 {
+    font-size: 17px;
+    font-family: "Roboto";
+    color: white;
+    background-color: #ae75bf;
+    width: 120px;
+    height: 40px;
+    border-width: 0;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.bt1:hover {
+    box-shadow: 0 0 20px rgba(161, 129, 181);
+}
+
+.bt2 {
+    font-size: 17px;
+    font-family: "Roboto";
+    color: #ae75bf;
+    background-color: transparent;
+    width: 120px;
+    height: 40px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ae75bf;
+    border-radius: 20px;
+}
+
+.bt2:hover {
+    box-shadow: 0 0 20px rgba(161, 129, 181);
+}
+
+.pad {
+    padding: 20px;
+}
+
+.pic:hover {
+    box-shadow: 0 0 90px rgba(197, 116, 237);
+}
+
+.pic {
+    box-shadow: 0 0 50px rgba(161, 129, 181);
+    border-radius: 140px;
+    height: 280px;
+    width: 300px;
+}
+
+.circle {
+    border-radius: 140px;
+    height: 15px;
+    width: 15px;
+}
+
+#color1:hover {
+    color: #ae75bf;
+}
+
+.nav_logo {
+    font-family: "Helvetica";
+    font-size: 20px;
+
+}
+
+.nav_span {
+    color: #ae75bf;
+    text-shadow: 0 0 5px #a181b5;
+
+}
+
+.nav_span1 {
+    color: #ffffff;
+    text-shadow: 0 0 5px #ffffff;
+
+}
+
+.page2head {
+    color: white;
+    font-family: "";
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+
+
+.timecon {
+    padding: 30px;
+    position: relative;
+    width: 50%;
+
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 100 auto;
+}
+
+.textbox {
+
+    padding: 10px;
+    background: rgba(161, 129, 181);
+    position: relative;
+    border-radius: 12px;
+}
+
+.textbox:hover {
+    box-shadow: 0 0 20px rgba(188, 159, 201);
+    background-color: #a873bf;
+}
+
+h2 {
+    color: white;
+    font-family: "";
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+small {
+    color: #44374a;
+    font-family: "Roboto";
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.para2 {
+    color: #44374a;
+    font-family: "Roboto";
+    font-size: 13px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.timecon img {
+    position: absolute;
+    width: 40px;
+    border-radius: 50%;
+    right: -20px;
+    top: 32px;
+    z-index: 10;
+}
+
+.rc img {
+    left: -20px;
+}
+
+.lc {
+    left: 0%;
+}
+
+.rc {
+    left: 50%;
+}
+
+.timeline::after {
+    position: absolute;
+    content: '';
+    width: 6px;
+    height: 100%;
+    background: #ae75bf;
+    top: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: -1;
+    animation: moveline 30s linear forwards;
+}
+
+@keyframes moveline {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 100%;
+    }
+}
+
+.skillbox {
+    padding: 10px;
+    background-color: #d1badb;
+    border-color: #af7bc7;
+    position: relative;
+    border-radius: 20px;
+    border-width: 10px;
+    border-style: solid;
+}
+
+.exhead {
+    color: #1f0a29;
+    font-family: "";
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.expara {
+    margin-left: 3px;
+    color: #1f0a29;
+    font-family: "Roboto";
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.sp {
+    font-family: "Roboto";
+    color: #1f0a29;
+    font-size: 23px;
+    font-weight: bolder;
+}
+
+.skillbox:hover {
+    background-color: #f4edf7;
+}
+
+.contact form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin: 5rem auto;
+    text-align: center;
+}
+
+input {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    width: 90%;
+    height: 50px;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    color: #f4edf7;
+    background-color: transparent;
+    border-radius: 1rem;
+    border: 2px solid #a873bf;
+    margin: 0.7rem 0;
+    resize: none;
+}
+
+textarea {
+    width: 100%;
+    height: 250px;
+    padding: 2rem;
+    font-size: 1.8rem;
+    color: #ffffff;
+    background-color: transparent;
+    border-radius: 2rem;
+    border: 2px solid #a873bf;
+    margin: 1.5rem 0;
+    resize: none;
+}
+
+.submitbtn {
+    font-size: 17px;
+    font-family: "Roboto";
+    color: white;
+    background-color: #ae75bf;
+    width: 120px;
+    height: 40px;
+    border-width: 0;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.modal-content {
+    background-color: #dfa3ff;
+}
+
+.icon {
+    color: #281f2e;
+    font-size: 24px;
+}
+
+.follow-us-icon-container {
+    background-color: #cd95f0;
+    width: 50px;
+    height: 50px;
+    border-radius: 40px;
+    margin: 10px;
+    padding-top: 12px;
+    padding-bottom: 10px;
+    padding-right: 11px;
+    padding-left: 14px;
+}
+
+.follow-us-icon-container:hover {
+    background-color: #d8cede;
+}
+
+.mail-id {
+    color: #cd95f0;
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.address {
+    color: #959ead;
+    font-family: "Roboto";
+    font-size: 10px;
+}
+</style>
+<body>
+    <div class="pad "></div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">
+            <h1 class="nav_logo"><span class="nav_span1">krish</span><span class="nav_span">dharmas</span></h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+                <a class="nav-link" id="color1" href="#homeSection">About Me </a>
+                <a class="nav-link" id="color1" href="#EducationSection">Education</a>
+                <a class="nav-link" id="color1" href="#PESection">Experience</a>
+                <a class="nav-link" id="color1" href="#ContactSection">Contact</a>
+                <a class="nav-link" id="color1" href="#FollowUsSection">Follow Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="pad p-5 p-5" id="homeSection">
+        <div class=" p-4 ">
+            <div class=" container">
+                <div class="row">
+                    <div class="col-12 col-md-6  order-md-1 d-md-none text-center p-3 mt-2">
+                        <img src="photo.jpeg" class="pic ml-3 mb-3" />
+                    </div>
+                    <div class="col-12 col-md-6  order-md-1 p-4">
+                        <h1 class="head1 "> Hi,It's <span class="name-span">KRISHNA PRIYA</span></h1>
+                        <h1 class="head2">I'm a <span class="name-span">Web developer</span></h1>
+                        <p class="para ">I'm a student at Sri Sairam Engineering College studying BE(CSE) IOT and also at NxtWave's CCBP 4.0 Academy, Where I'm learning Full-stack development with a specailisation in 4.0 technologies. I'm a huge fan of coding challenges and hands-on projects</p>
+                          <button class="bt1 mb-2" onclick="myFunction()">open to work</button> 
+			  <a href="#ContactSection"> <button class="bt2 mb-2 "> contact us</button></a>
+                    </div>
+                    <div class="col-12 col-md-6  order-md-1 d-md-block d-none text-center p-3 mt-2">
+                        <img src="photo.jpeg" class="pic ml-3 mb-3" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pad p-5" id="EducationSection">
+        <h1 class="page2head text-center pt-5">Education</h1>
+        <div class="timeline ">
+            <div class="timecon lc">
+                <img src="https://www.colorhexa.com/b780d1.png " class="circle" />
+                <div class="textbox  mb-2 ">
+                    <h2>High School</h2>
+                    <small>2021-2023</small>
+                    <P class="para2"> Valluvar Gurukulam Higher Secondary School,<br>Chennai-Tambaram </P>
+                </div>
+            </div>
+            <div class="timecon rc">
+                <img src="https://www.colorhexa.com/b780d1.png " class="circle" />
+                <div class="textbox mb-2">
+                    <h2>University</h2>
+                    <small>2023-2027</small>
+                    <P class="para2">SRI SAIRAM Engineering College<br>Chennai-Kanchipuram </P>
+                </div>
+            </div>
+            <div class="timecon lc">
+                <img src="https://www.colorhexa.com/b780d1.png " class="circle" />
+                <div class="textbox mb-2">
+                    <h2>NxtWave CCBP 4.0 technologies</h2>
+                    <small>2023-2027</small>
+                    <P class="para2">IITian's coaching platform <br>Through-Online </P>
+                </div>
+            </div>
+            <div class="timecon rc">
+                <img src="https://www.colorhexa.com/b780d1.png " class="circle" />
+                <div class="textbox mb-2">
+                    <h2>Internship</h2>
+                    <small>2024</small>
+                    <P class="para2"> Prodigy Infotech Internship<br>Online</P>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pad p-5" id="PESection">
+        <h1 class="page2head text-center mb-3 pt-5">Experience</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6  mb-3">
+                    <div class="skillbox">
+                        <h1 class="text-center exhead">FRONTEND DEVELOPMENT</h1>
+                        <p class="expara ml-3">Learning</p>
+                        <ol class="ml-3 sp">
+                            <div class="icon-bg ">
+                                <i class="fa-solid fa-circle-check"></i>
+                                HTML - 80%
+                        </ol>
+                        <ol class="ml-3 sp">
+                            <div class="icon-bg ">
+                                <i class="fa-solid fa-circle-check"></i>
+                                CSS - 80%
+                        </ol>
+                        <ol class="ml-3 sp">
+                            <div class="icon-bg ">
+                                <i class="fa-solid fa-circle-check"></i>
+                                JAVASCRIPT - 20%
+                        </ol>
+                    </div>
+
+                </div>
+
+
+                <div class="col-12 col-md-6 mb-3">
+                    <div class="skillbox">
+                        <h1 class="text-center exhead">BACKEND DEVELOPMENT</h1>
+                        <p class="expara ml-3">Learning</p>
+                        <ol class="ml-3 sp">
+                            <div class="icon-bg ">
+                                <i class="fa-solid fa-circle-check"></i>
+                                MongoDB - 10%
+                        </ol>
+                        <ol class="ml-3 sp">
+                            <div class="icon-bg ">
+                                <i class="fa-solid fa-circle-check"></i>
+                                React JS - 10%
+                        </ol>
+                        <ol class="ml-3 sp">
+                            <div class="icon-bg ">
+                                <i class="fa-solid fa-circle-check"></i>
+                                PYTHON - 82%
+                        </ol>
+
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-12  mb-3">
+                    <div class="skillbox">
+                        <h1 class="text-center exhead">DATABASE</h1>
+                        <p class="expara ml-3 ">Learning</p>
+                        <ol class="ml-3 sp">
+                            <div class="icon-bg mb-5  ">
+                                <i class="fa-solid fa-circle-check "></i>
+                                MySQL - 50%
+                        </ol>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="pad p-5" id="ContactSection">
+        <div class="contact">
+            <h1 class="page2head text-center mb-3 pt-5">Contact <span class="nav_span">Me</span></h1>
+            <form action="">
+                <div class="input-box ">
+                    <input class="textarea" type="FullName" placeholder="FullName"> <br>
+                    <input type="email" placeholder="Email"> <br>
+                    <input type="PhoneNumber" placeholder="PhoneNumber">
+                </div>
+                <div class="input-box">
+                    <textarea name=" " id=" " cols="30" row="10" placeholder="Your Message"></textarea>
+                    <button type="button" class="submitbtn" data-toggle="modal" data-target="#exampleModal">
+                        Submit
+                    </button>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title icon-bg" id="exampleModalLabel">
+                                        Submitted Sucessfully
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="#ae75bf" height="20" width="20" viewBox="0 0 448 512">
+                                            <path d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
+                                        </svg>
+                                    </h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="https://img.freepik.com/free-vector/hand-drawn-thank-you-text-design-banner_23-2151175378.jpg" style="width:430px; height:150px;" />
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="submitbtn" data-dismiss="modal">Done</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="pad p-5" id="FollowUsSection">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="page2head text-center">Follow US</h1>
+                </div>
+                <div class="col-12">
+                    <div class="d-flex flex-row justify-content-center">
+                        <a href="https://www.instagram.com/krishdharmas/">
+                            <div class="follow-us-icon-container">
+                                <i class="fab fa-instagram icon"></i>
+                            </div>
+                        </a>
+                        <a href="https://web.telegram.org/a/#6435108201">
+                            <div class="follow-us-icon-container">
+                                <i class="fab fa-telegram icon"></i>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/krishnapriya-dharmaraj">
+                            <div class="follow-us-icon-container">
+                                <i class="fa-brands fa-linkedin icon"></i>
+                            </div>
+                        </a>
+                        <a href="https://x.com/Krishnadharmas/">
+                            <div class="follow-us-icon-container">
+                                <i class="fa-brands fa-twitter icon"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="mail-id">krishnadharma0811@gmail.com</h1>
+                <p class="address">
+                <div class="address">
+                    <i class="fa-regular fa-copyright"></i> Krishnadharmas | All Rights Reserved
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+<script>
+function myFunction() {
+    alert("Oops! Just for Content");
+}
+</script>
+</body>
+
+</html>
